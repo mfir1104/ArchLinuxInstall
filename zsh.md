@@ -108,3 +108,22 @@ $ paru nerd font
 set `ZSH_THEME="powerlevel10k/powerlevel10k"` in `~/.zshrc`
 
 type `p10k configure` if the configuration wizard doesn't start automatically
+
+## Clear backbuffer using CTRL + L
+
+edit `~/.zshrc`
+
+```
+# clear backbuffer using CTRL + L
+function clear-screen-and-scrollback() {
+    echoti civis >"$TTY"
+    printf '%b' '\e[H\e[2J' >"$TTY"
+    zle .reset-prompt
+    zle -R
+    printf '%b' '\e[3J' >"$TTY"
+    echoti cnorm >"$TTY"
+}
+
+zle -N clear-screen-and-scrollback
+bindkey '^L' clear-screen-and-scrollback
+```
