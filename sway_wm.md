@@ -57,3 +57,12 @@ edit `~/.config/sway/config`
 default_border pixel 0
 default_floating_border pixel 0
 ```
+
+# gaps
+
+edit `~/.config/sway/config`
+
+```
+gaps outer 5
+gaps inner 10
+```
