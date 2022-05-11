@@ -9,7 +9,6 @@ install `waybar` package
 config
 
 ```shell
-$ git clone https://github.com/Alexays/Waybar.git
 $ mkdir -p ~/.config/waybar
-$ cp -r Waybar/resources/* ~/.config/waybar
+$ cp -r /etc/xdg/waybar/* ~/.config/waybar/
 ```
