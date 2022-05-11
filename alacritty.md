@@ -29,3 +29,21 @@ edit config file `~/.config/alacritty/config`
 key_bindings:
   - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
 ```
+
+install AUR packge, `alacritty-themes`
+
+```shell
+paru -S alacritty-themes
+```
+
+list available themes
+
+```shell
+alacritty-themes --list
+```
+
+change theme to One Dark
+
+```shell
+alacritty themes One-Dark
+```
