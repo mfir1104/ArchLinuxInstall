@@ -19,7 +19,9 @@ if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
 fi
 ```
 
-HiDPI, find display name using `swaymsg -t get_outputs`
+## HiDPI
+
+find display name using `swaymsg -t get_outputs`
 
 edit `~/.config/sway/config`
 
@@ -27,7 +29,9 @@ edit `~/.config/sway/config`
 output HDMI-A-1 mode 3840x2160 position 0,0 scale 1.5
 ```
 
-clipboard, install `clipman`
+## Clipboard
+
+install `clipman`
 
 edit `~/.config/sway/config`
 
@@ -35,10 +39,21 @@ edit `~/.config/sway/config`
 exec wl-paste -t text --watch clipman store --no-persist
 ```
 
+## Numlock
+
 initially enable numlock
 
 edit `~/.config/sway/config`
 
 ```
 input * xkb_numlock enable
+```
+
+## Remove title bar
+
+edit `~/.config/sway/config`
+
+```
+default_border pixel 0
+default_floating_border pixel 0
 ```
